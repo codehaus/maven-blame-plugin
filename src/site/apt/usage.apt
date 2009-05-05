@@ -9,7 +9,7 @@
 
 Usage
 
- The following examples describe the basic usage of the mave blame plugin.
+ The following examples describe the basic usage of the maven blame plugin.
 
 * Generate Maven Blame Report As Part of the Project Reports
 
@@ -41,12 +41,12 @@ mvn site
 
 * Generate Maven Blame Report As Standalone
 
-  You can also generate the blame report by explicitly executing the <<<checkstyle:checkstyle>>> goal from the
+  You can also generate the blame report by explicitly executing the <<<blame:blame>>> goal from the
   command line. It is not required to specify the Maven Blame plugin in your
   <<<pom.xml>>> unless you want to use a specific configuration.
 
 +-----+
-mvn checkstyle:blame
+mvn blame:blame
 +-----+
 
  To specifically configure the Maven Blame plugin, you need to add the
