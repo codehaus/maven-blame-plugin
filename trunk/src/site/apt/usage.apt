@@ -23,7 +23,7 @@ Usage
   <reporting>
     <plugins>
       <plugin>
-			<groupId>org.codehaus.mojo</groupId>
+			<groupId>org.codehaus.maven-blame-plugin</groupId>
 				<artifactId>maven-blame-plugin</artifactId>
 				<version>1.0-SNAPSHOT</version>
 			</plugin>
