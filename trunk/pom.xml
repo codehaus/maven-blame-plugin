@@ -1,0 +1,189 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.codehaus.mojo</groupId>
+	<artifactId>maven-blame-plugin</artifactId>
+	<packaging>maven-plugin</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<prerequisites>
+		<maven>2.0.5</maven>
+	</prerequisites>
+	<name>Maven Blame Plugin</name>
+	<description>This Plug-In adds the developper name for each error in xml checkstyle/pmd/findbugs reports,
+		and generates
+		a report with the number of errors per developper, lines of code per developper,
+		...</description>
+	<url>http://maven.apache.org/plugins/</url>
+	<issueManagement>
+		<system>JIRA</system>
+		<url>http://jira.codehaus.org/browse/MVNBLAME</url>
+	</issueManagement>
+	<inceptionYear>2008</inceptionYear>
+	<mailingLists>
+		<mailingList>
+			<name>Commits List</name>
+			<subscribe>https://xircles.codehaus.org/lists/scm@maven-blame-plugin.codehaus.org/subscribe</subscribe>
+			<unsubscribe>https://xircles.codehaus.org/lists/scm@maven-blame-plugin.codehaus.org/unsubscribe</unsubscribe>
+			<post>scm@maven-blame-plugin.codehaus.org</post>
+			<archive>http://markmail.org/list/org.codehaus.maven-blame-plugin.scm</archive>
+		</mailingList>
+		<mailingList>
+			<name>User List</name>
+			<subscribe>https://xircles.codehaus.org/lists/user@maven-blame-plugin.codehaus.org/subscribe</subscribe>
+			<unsubscribe>https://xircles.codehaus.org/lists/user@maven-blame-plugin.codehaus.org/unsubscribe</unsubscribe>
+			<post>user@maven-blame-plugin.codehaus.org</post>
+			<archive>http://markmail.org/list/org.codehaus.maven-blame-plugin.user</archive>
+		</mailingList>
+		<mailingList>
+			<name>Developer List</name>
+			<subscribe>https://xircles.codehaus.org/lists/dev@maven-blame-plugin.codehaus.org/subscribe</subscribe>
+			<unsubscribe>https://xircles.codehaus.org/lists/dev@maven-blame-plugin.codehaus.org/unsubscribe</unsubscribe>
+			<post>dev@maven-blame-plugin.codehaus.org</post>
+			<archive>http://markmail.org/list/org.codehaus.maven-blame-plugin.dev</archive>
+		</mailingList>
+		<mailingList>
+			<name>Announcements List</name>
+			<subscribe>https://xircles.codehaus.org/lists/announce@maven-blame-plugin.codehaus.org/subscribe</subscribe>
+			<unsubscribe>https://xircles.codehaus.org/lists/announce@maven-blame-plugin.codehaus.org/unsubscribe</unsubscribe>
+			<post>announce@maven-blame-plugin.codehaus.org</post>
+			<archive>http://markmail.org/list/org.codehaus.maven-blame-plugin.announce</archive>
+		</mailingList>
+	</mailingLists>
+	<scm>
+		<connection>scm:svn:http://svn.codehaus.org/maven-blame-plugin</connection>
+		<developerConnection>scm:svn:http://svn.codehaus.org/maven-blame-plugin</developerConnection>
+		<url>http://fisheye.codehaus.org/browse/maven-blame-plugin/</url>
+	</scm>
+	<developers>
+		<developer>
+			<id>michenux</id>
+			<name>Laurent Michenux</name>
+			<email>lmichenaud@gmail.com</email>
+			<organization />
+			<roles>
+				<role>Documentation</role>
+				<role>Java Developer</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<distributionManagement>
+		<downloadUrl></downloadUrl>
+	</distributionManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-plugin-api</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.tmatesoft.svnkit</groupId>
+			<artifactId>svnkit</artifactId>
+			<version>1.2.0.4949</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven.reporting</groupId>
+			<artifactId>maven-reporting-impl</artifactId>
+			<version>2.0.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven.reporting</groupId>
+			<artifactId>maven-reporting-api</artifactId>
+			<version>2.0.4</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${compileSource}</source>
+					<target>${tarjetJdk}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.1</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<!-- report>index</report -->
+							<report>summary</report>
+							<report>dependencies</report>
+							<report>dependency-convergence</report>
+							<report>project-team</report>
+							<!-- report>cim</report-->
+							<report>mailing-list</report>
+							<report>issue-tracking</report>
+							<report>license</report>
+							<report>scm</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-plugin-plugin</artifactId>
+				<version>2.4.3</version>
+				<configuration>
+					<requirements>
+						<maven>2.0.5</maven>
+						<jdk>1.5</jdk>
+					</requirements>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changes-plugin</artifactId>
+				<version>2.1</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>changes-report</report>
+							<!-- report>jira-report</report-->
+						</reports>
+					</reportSet>
+				</reportSets>
+				<configuration>
+					<columnNames>
+						Type,Key,Summary,Assignee,Status,Resolution,Fix Version
+					</columnNames>
+					<onlyCurrentVersion>true</onlyCurrentVersion>
+					<resolutionIds>Closed</resolutionIds>
+					<sortColumnNames>Type,Key</sortColumnNames>
+					<issueLinkTemplate>http://jira.codehaus.org/browse/%ISSUE%</issueLinkTemplate>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+	<properties>
+		<compileSource>1.5</compileSource>
+		<tarjetJdk>1.5</tarjetJdk>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+</project>
