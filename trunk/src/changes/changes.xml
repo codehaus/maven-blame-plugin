@@ -1,0 +1,15 @@
+<document>
+  <properties>
+    <title>Maven Blame plugin changelog</title>
+    <author email="lmichenaud@gmail.com">
+      Laurent Michenaud
+    </author>
+  </properties>
+  <body>
+    <release version="1.0-SNAPSHOT" date="today">
+      <action dev="developper" type="update">
+        description
+      </action>
+    </release>
+  </body>
+</document>
