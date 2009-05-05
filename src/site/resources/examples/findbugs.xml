@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="1.2.1" threshold="Low" effort="Default"> 
+  <file classname="org.michenux.maven.blametest.BlameTest"> 
+    <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="High" category="STYLE" message="DLS: Alimentation à perte d'une variable locale dans la méthode org.michenux.maven.blametest.BlameTest.main(String[])" lineNumber="29" author="vincent"/>  
+    <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="High" category="STYLE" message="DLS: Alimentation à perte d'une variable locale dans la méthode org.michenux.maven.blametest.BlameTest.main(String[])" lineNumber="22" author="david"/>  
+    <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="High" category="STYLE" message="DLS: Alimentation à perte d'une variable locale dans la méthode org.michenux.maven.blametest.BlameTest.main(String[])" lineNumber="25" author="thomas"/>  
+    <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="Normal" category="STYLE" message="DLS: Alimentation à perte d'une variable locale dans la méthode org.michenux.maven.blametest.BlameTest.main(String[])" lineNumber="28" author="thomas"/>  
+    <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="Low" category="STYLE" message="DLS: Alimentation à perte d'une variable locale dans la méthode org.michenux.maven.blametest.BlameTest.main(String[])" lineNumber="28" author="thomas"/>  
+    <BugInstance type="SA_LOCAL_DOUBLE_ASSIGNMENT" priority="Normal" category="CORRECTNESS" message="SA: Double assignment of i2 in org.michenux.maven.blametest.BlameTest.main(String[])" lineNumber="28" author="thomas"/> 
+  </file>  
+  <Errors></Errors>  
+  <Project> 
+    <SrcDir>D:\workspace\MavenBlamePluginTest\src\main\java</SrcDir> 
+  </Project> 
+</BugCollection>

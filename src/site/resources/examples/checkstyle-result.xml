@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<checkstyle version="4.4"> 
+  <file name="D:\workspace\MavenBlamePluginTest\src\main\java\org\michenux\maven\blametest\package.html"> 
+    <error line="0" severity="error" message="Fichier de documentation de package manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.PackageHtmlCheck"/> 
+  </file>  
+  <file name="D:\workspace\MavenBlamePluginTest\src\main\java\org\michenux\maven\blametest\BlameTest.java"></file>  
+  <file name="D:\workspace\MavenBlamePluginTest\src\main\java\org\michenux\maven\blametest\BlameTest.java"> 
+    <error line="4" column="8" severity="error" message="Import inutilisé - java.io.FileNotFoundException." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck" author="michenux"/>  
+    <error line="11" column="1" severity="error" message="Les classes utilitaires ne doivent pas avoir de constructeur par défaut ou public." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck" author="michenux"/>  
+    <error line="13" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="michenux"/>  
+    <error line="13" column="9" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck" author="michenux"/>  
+    <error line="13" column="33" severity="error" message="Le paramètre args devrait être final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck" author="michenux"/>  
+    <error line="14" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.GenericIllegalRegexpCheck" author="michenux"/>  
+    <error line="14" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="michenux"/>  
+    <error line="15" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="michenux"/>  
+    <error line="16" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="michenux"/>  
+    <error line="16" column="26" severity="error" message="Il y a une espace de trop avant ';'." source="com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck" author="michenux"/>  
+    <error line="17" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.GenericIllegalRegexpCheck" author="michenux"/>  
+    <error line="17" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="michenux"/>  
+    <error line="18" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="michenux"/>  
+    <error line="19" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="michenux"/>  
+    <error line="19" column="43" severity="error" message="Il y a une espace de trop avant ';'." source="com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck" author="michenux"/>  
+    <error line="20" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.GenericIllegalRegexpCheck" author="michenux"/>  
+    <error line="20" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="michenux"/>  
+    <error line="21" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="michenux"/>  
+    <error line="22" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="david"/>  
+    <error line="23" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.GenericIllegalRegexpCheck" author="david"/>  
+    <error line="23" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="david"/>  
+    <error line="24" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="david"/>  
+    <error line="25" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="thomas"/>  
+    <error line="26" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.GenericIllegalRegexpCheck" author="thomas"/>  
+    <error line="26" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="thomas"/>  
+    <error line="27" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="thomas"/>  
+    <error line="28" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="thomas"/>  
+    <error line="28" column="33" severity="error" message="Evitez d'affecter une valeur à une variable au sein d'une expression." source="com.puppycrawl.tools.checkstyle.checks.coding.InnerAssignmentCheck" author="thomas"/>  
+    <error line="28" column="39" severity="error" message="Il y a une espace de trop avant ';'." source="com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck" author="thomas"/>  
+    <error line="29" severity="error" message="La ligne excède 80 caractères." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck" author="vincent"/>  
+    <error line="29" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="vincent"/>  
+    <error line="29" column="86" severity="error" message="'3' devrait être défini comme une constante." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck" author="vincent"/>  
+    <error line="30" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.GenericIllegalRegexpCheck" author="vincent"/>  
+    <error line="30" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="vincent"/>  
+    <error line="31" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="michenux"/>  
+    <error line="32" column="1" severity="error" message="La ligne contient un caractère tabulation." source="com.puppycrawl.tools.checkstyle.checks.whitespace.TabCharacterCheck" author="michenux"/> 
+  </file> 
+</checkstyle>
