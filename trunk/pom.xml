@@ -13,7 +13,7 @@
 		and generates
 		a report with the number of errors per developper, lines of code per developper,
 		...</description>
-	<url>http://maven.apache.org/plugins/</url>
+	<url>http://maven-blame-plugin.codehaus.org/</url>
 	<issueManagement>
 		<system>JIRA</system>
 		<url>http://jira.codehaus.org/browse/MVNBLAME</url>
@@ -57,7 +57,7 @@
 	<developers>
 		<developer>
 			<id>michenux</id>
-			<name>Laurent Michenux</name>
+			<name>Laurent Michenaud</name>
 			<email>lmichenaud@gmail.com</email>
 			<organization />
 			<roles>
