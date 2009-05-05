@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<faqs id="FAQ" title="Frequently Asked Questions">
+  <part id="General">
+    <faq id="question id">
+      <question>How is maven-blame-plugin ?</question>
+      <answer>
+        <p>
+          It rocks !
+        </p>
+      </answer>
+    </faq>
+  </part>
+</faqs>
