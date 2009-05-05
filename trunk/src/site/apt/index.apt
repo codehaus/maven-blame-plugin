@@ -17,7 +17,7 @@ Maven Blame Plugin
 
    The Maven Blame plugin has one goal :
 
-   * {{{checkstyle-mojo.html}checkstyle:checkstyle}} performs Checkstyle analysis and generates a report on violations.
+   * {{{blame-mojo.html}blame:blame}}.
 
 * Usage
 
