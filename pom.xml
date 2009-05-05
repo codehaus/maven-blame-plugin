@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.codehaus.mojo</groupId>
+	<groupId>org.codehaus.maven-blame-plugin</groupId>
 	<artifactId>maven-blame-plugin</artifactId>
 	<packaging>maven-plugin</packaging>
 	<version>1.0-SNAPSHOT</version>
@@ -18,6 +18,23 @@
 		<system>JIRA</system>
 		<url>http://jira.codehaus.org/browse/MVNBLAME</url>
 	</issueManagement>
+	<distributionManagement>
+		<repository>
+			<id>svnblame-release</id>
+			<name>Maven Svn Blame Plugin's release repository</name>
+			<url>https://dav.codehaus.org/repository/maven-blame-plugin</url>
+			<uniqueVersion>false</uniqueVersion>
+		</repository>
+		<snapshotRepository>
+			<id>svnblame-snapshot</id>
+			<name>Maven Svn Blame Plugin's snapshot repository</name>
+			<url>https://dav.codehaus.org/snapshots.repository/maven-blame-plugin</url>
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
+		<site>
+			
+		</site>
+	</distributionManagement>
 	<inceptionYear>2008</inceptionYear>
 	<mailingLists>
 		<mailingList>
@@ -74,9 +91,6 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-	<distributionManagement>
-		<downloadUrl></downloadUrl>
-	</distributionManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.maven</groupId>
