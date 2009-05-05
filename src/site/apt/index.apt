@@ -1,0 +1,39 @@
+ ------
+ Introduction
+ ------
+ Laurent Michenaud
+ ------
+ 02 Janvier 2009
+ ------
+
+Maven Blame Plugin
+
+  The Maven Blame plugin updates the xml checkstyle/pmd/findbugs reports. For each error/violation
+  in the xml, it adds the developper name who has commited the line in the svn.
+  It generates also a report where you can see some statistics like the number of errors for
+  each developper.
+
+* Goals Overview
+
+   The Maven Blame plugin has one goal :
+
+   * {{{checkstyle-mojo.html}checkstyle:checkstyle}} performs Checkstyle analysis and generates a report on violations.
+
+* Usage
+
+   Instructions on how to use the Maven Blame plugin can be found {{{usage.html}here}}.
+
+* Examples
+
+   The following examples show how to use the Checkstyle Plugin in more advanced usecases:
+
+   * {{{examples/findbugs.xml}Example of updated xml findbugs report}}
+
+   * {{{examples/checkstyle-result.xml}Example of updated xml checkstyle report}}
+
+   * {{{examples/pmd.xml}Example of updated xml pmd report}}
+
+   * {{{examples/blame-report.html}Example of a Maven Blame Report}}
+
+
+ 

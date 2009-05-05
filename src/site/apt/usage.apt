@@ -1,0 +1,78 @@
+ ------
+ Usage
+ ------
+ Laurent Michenaud
+ ------
+ 2 January 2009
+ ------
+
+
+Usage
+
+ The following examples describe the basic usage of the mave blame plugin.
+
+* Generate Maven Blame Report As Part of the Project Reports
+
+  To generate the maven blame report as part of the Project Reports, add the
+  Blame plugin in the <<<\<reporting\>>>> section
+  of your <<<pom.xml>>> after the other ones( checkstyle, pmd and findbugs ).
+
++-----+
+<project>
+  ...
+  <reporting>
+    <plugins>
+      <plugin>
+			<groupId>org.codehaus.mojo</groupId>
+				<artifactId>maven-blame-plugin</artifactId>
+				<version>1.0-SNAPSHOT</version>
+			</plugin>
+    </plugins>
+  </reporting>
+  ...
+</project>
++-----+
+
+  Then, execute the site plugin to generate the report.
+
++-----+
+mvn site
++-----+
+
+* Generate Maven Blame Report As Standalone
+
+  You can also generate the blame report by explicitly executing the <<<checkstyle:checkstyle>>> goal from the
+  command line. It is not required to specify the Maven Blame plugin in your
+  <<<pom.xml>>> unless you want to use a specific configuration.
+
++-----+
+mvn checkstyle:blame
++-----+
+
+ To specifically configure the Maven Blame plugin, you need to add the
+ <<<\<configuration\>>>> section in your <<<pom.xml>>> as
+ shown in the sample below.
+
++-----+
+
+
+<project>
+  ...
+  <reporting>
+    <plugins>
+      <plugin>
+		<groupId>org.codehaus</groupId>
+			<artifactId>maven-blame-plugin</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<configuration>
+				<enableCheckstyle>true</enableCheckstyle>
+				<enablePmd>true</enablePmd>
+				<enableFindBugs>true</enableFindBugs>
+				<fullBlame>true</fullBlame>
+			</configuration>
+		</plugin>
+    </plugins>
+  </reporting>
+  ...
+</project>
++-----+
